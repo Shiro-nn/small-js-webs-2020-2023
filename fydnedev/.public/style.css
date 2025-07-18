@@ -1,0 +1,189 @@
+@import url('https://cdn.scpsl.store/scpsl.store/fonts/ComicSans/style.css');
+::-webkit-scrollbar{
+height: 9px;
+width: 9px;
+}
+::-webkit-scrollbar-thumb{
+background-color: var(--main-color);
+border-radius: 99px;
+}
+::-webkit-scrollbar-track{
+background-color: #18191c;
+}
+::-moz-selection{color:var(--main-color);background:#30004250;border-radius:15px}
+::selection{color:var(--main-color);background:#30004250}
+
+html{
+background: linear-gradient(to top right, #05112f, #030814);
+min-height: 100vh;
+font-family: -apple-system,BlinkMacSystemFont,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+text-rendering: optimizeLegibility;
+color: #fff;
+}
+body{margin: 0;}
+
+.header, .header *{z-index: 10;}
+.header{
+position: relative;
+z-index: 9;
+height: max(70vh, 400px);
+background: linear-gradient(to bottom, #000000c0, #00000000);
+border-bottom: 1px #fff;
+}
+.header .text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+background-color: #000000a6;
+border-radius: 20px;
+padding: 10px;
+}
+.header span, .cnt .ttl{
+display: flex;
+justify-content: center;
+font-family: "Fira Code",monospace;
+font-size: 50px;
+font-weight: 600;
+}
+.header span cm{user-select: none;}
+.header span txt{margin-left: 10px;}
+.header span blk{
+display: inline;
+animation: blink 1s step-start 0s infinite;
+color: #ff7d26;
+user-select: none;
+}
+.header span.desc{
+margin-top: 10px;
+font-weight: 400;
+font-size: 35px;
+}
+.dh canvas{
+position: absolute;
+top:0;
+z-index: 8;
+}
+
+
+@keyframes blink{50%{opacity:0}}
+
+.cnt{
+margin: 20px 0;
+}
+.cnt .ttl{
+cursor: text;
+}
+.cnt .prjs{
+margin: 20px auto;
+display: grid;
+justify-items: center;
+justify-content: center;
+grid-template-columns: repeat(auto-fill, minmax(max(calc(min(70vw, 1000px) / 4), 210px), 1fr));
+width: min(70vw, 1000px);
+}
+.cnt .prj{
+position: relative;
+display: inline-block;
+vertical-align: top;
+margin: 10px;
+width: 200px;
+height: 250px;
+background-color: #192338;
+border-radius: 15px;
+overflow: hidden;
+}
+.cnt .prj .icon{
+margin: 25px;
+width: 150px;
+height: 150px;
+margin-bottom: 10px;
+background-size: cover;
+background-position: 50%;
+}
+.cnt .prj span{
+display: flex;
+justify-content: center;
+font-family: 'ComicSans', -apple-system, cursive;
+font-weight: 400;
+font-size: 35px;
+padding: 0 15px;
+}
+.cnt .prj span.fix{
+height: 49px;
+vertical-align:top;
+}
+.cnt .prj .desc{
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+height: calc(100% - 10px);
+width: calc(100% - 10px);
+border-radius: 15px;
+background: linear-gradient(to top right, #131a2b, #2d3953);
+animation: scrollToTop .5s cubic-bezier(0.18, 0.54, 0.58, 1);
+padding: 5px;
+}
+.cnt .prj .desc span{
+font-weight: 300;
+font-size: 20px;
+padding: 0 5px;
+}
+.cnt .prj .desc button{
+display: block;
+margin: auto;
+margin-top: 20px;
+border: 0;
+width: 100px;
+height: 30px;
+border-radius: 25px;
+margin-bottom: 10px;
+color: #282e38;
+background-color: lime;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+cursor: pointer;
+}
+@media (hover: hover) {
+.cnt .prj:hover .desc{
+display: block;
+}
+}
+
+@-webkit-keyframes scrollToTop {
+from{transform: translateY(100%)}
+100%{transform: translateY(0)}
+}
+
+@keyframes scrollToTop {
+from {transform: translateY(100%)}
+100%{transform: translateY(0)}
+}
+
+
+.qurre-pay-icon{
+background-image: url('/icons/qurre-pay.svg');
+}
+.qurre-id-icon{
+background-image: url('/icons/qurre-id.svg');
+}
+.game-icon{
+background-image: url('/icons/console.svg');
+}
+.qurre-socket-icon{
+background-image: url('/icons/outlet.svg');
+}
+.soundcloud-icon{
+background-image: url('/icons/soundcloud.svg');
+}
+
+.qurre-bot-icon{
+background-image: url('/icons/robot.svg');
+}
+
+.qurre-sl-icon{
+background-image: url('/icons/sitemap.svg');
+}
